@@ -4,7 +4,8 @@ class RegistartionTest(BaseTest):
 
     def setUp(self):
         super().setUp()
-        self.home_page.click_sign_in()
+        self.authentication_page = self.home_page.click_sign_in()
+        self.authentication_page.enter_create_account_email("test@test.pl")
 
     def testNoSurname(self):
         pass
